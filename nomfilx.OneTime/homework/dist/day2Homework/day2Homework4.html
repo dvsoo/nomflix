@@ -1,0 +1,66 @@
+<html>
+
+<head>
+    <title>Grid Challenges</title>
+    <meta charset="UTF-8" />
+    <style>
+        html,
+        body {
+            padding: 0;
+            margin: 0;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu,
+            Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+        }
+
+        .child {
+            color: black;
+            background-color: #f1c40f;
+            font-size: 18px;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .father {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            grid-template-rows: 150px 100px 150px;
+            grid-column-gap: 10px;
+            grid-row-gap: 10px;
+        }
+
+        .child-1,
+        .child-5 {
+            background-color: greenyellow;
+            grid-row: 1/ 4;
+        }
+
+        /* 여기까지만 쓰면 5번이 왼쪽으로 간다. 이는 즉, row를 넣은 것들은 다시 한 번 
+        왼쪽이 우선순위로 재배열 되는 것을 알 수 있다.  5번 뿐만 아니라 다른 child를 넣으면 다 왼쪽으로 간다.*/
+
+        .child-5 {
+            grid-column: 5 /6;
+        }
+
+        /* 그렇기 때문에 각자의 요소를 잡아 위치를 설정해 주어야 한다. */
+    </style>
+</head>
+
+<body>
+    <div class="father">
+        <div class="child child-1">1</div>
+        <div class="child child-2">2</div>
+        <div class="child child-3">3</div>
+        <div class="child child-4">4</div>
+        <div class="child child-5">5</div>
+        <div class="child child-6">6</div>
+        <div class="child child-7">7</div>
+        <div class="child child-8">8</div>
+        <div class="child child-9">9</div>
+        <div class="child child-10">10</div>
+        <div class="child child-10">11</div>
+    </div>
+</body>
+
+</html>
