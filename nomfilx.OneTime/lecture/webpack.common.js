@@ -18,6 +18,10 @@ const commonConfig = {
         use: {
           loader: "babel-loader"
         }
+      },
+      {
+        test: /\.(jpg?j|png|gif|svg)$/i,
+        use: ["url-loadre?limit=10000", "img-loader"]
       }
     ]
   },

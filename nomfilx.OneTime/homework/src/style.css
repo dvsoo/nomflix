@@ -1,4 +1,17 @@
-.hello {
-  color: red;
-  /* background: url("./atooo.jpeg"); */
+nav {
+  position: fixed;
+  background-color: red;
+  height: 80px;
+  top: 0;
+  left: 0;
+  width: 100%;
+  transition: background-color 0.4s ease-in;
+}
+
+nav.scrolled {
+  background-color: yellow;
+}
+
+body {
+  height: 1000vh;
 }
