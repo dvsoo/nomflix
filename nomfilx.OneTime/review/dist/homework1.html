@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Header and Video</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="app.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+    <header class="header"></header> <!-- END header-->
+    <div class="videoBox">
+        <video src="https://archive.org/download/BigBuckBunny_124/Content/big_buck_bunny_720p_surround.mp4" class="js-video"></video>
+        <button class="js-playBtn">▶️</button>
+        <button class="js-mutedBtn">🔇</button>
+        <input class="js-range" list="volume" type="range" min="0" max="1" step="0.1" />
+        <datalist id="volumn">
+            <option value="0" class="js-volumn"></option>
+            <option value="0.25" class="js-volumn"></option>
+            <option value="0.5" label="50%" class="js-volumn"></option>
+            <option value="0.75" class="js-volumn"></option>
+            <option value="1" label="100%" class="js-volumn"></option>
+        </datalist>
+    </div>
+    <script src="bundle.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,22 @@
+@import "homework1";
+@import "homework2";
+@import "homework3";
+@import "homework4";
+
+.homework {
+  border: 1px solid #bbb;
+  color: #222;
+  text-decoration: none;
+  display: inline-block;
+  padding: 5px 10px;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  height: 500vh;
+}
