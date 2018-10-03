@@ -5,13 +5,21 @@
   "main": "index.js",
   "dependencies": {
     "express": "^4.16.3",
+    "mongoose": "^5.3.1",
     "morgan": "^1.9.1",
     "socket.io": "^2.1.1"
   },
   "scripts": {
-    "dev": "nodemon ."
+    "start": "node index.js",
+    "dev": "nodemon .",
+    "server": "lt --port 4000"
   },
   "devDependencies": {
     "nodemon": "^1.18.4"
+  },
+  "now": {
+    "env": {
+      "MONGO": "@mongodb://root:sookung55@ds121373.mlab.com:21373/chat"
+    }
   }
 }
