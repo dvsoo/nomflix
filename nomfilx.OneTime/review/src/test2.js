@@ -21,23 +21,55 @@ const form = document.querySelector(".js-form"),
   unList = document.querySelector(".unList"),
   completeList = document.querySelector(".list");
 
-const addEvents = () => {};
+const js_deleteTodo = event => {
+  const button = event.target;
+  const unListChild = button.parentElement;
+  const parentList = unListChild.parentElement;
+  console.log("adf");
+  console.log(unListChild);
+};
+
+const js_editTodo = event => {};
+
+const addEvents = unListChild => {
+  const js_delete = unListChild.querySelector(".deleteBtn");
+
+  js_delete.onclick = js_deleteTodo();
+};
 
 const addTodoList = getTodo => {
-  const unListChild = document.createElement("li"),
-    listDeleteBtn = document.createElement("button");
-
-  listDeleteBtn.innerHTML = "❌";
-  unListChild.innerHTML = getTodo; ////appendChild는 tag만 불러올 수 있다. 텍스트는 innerHTML
-
-  listDeleteBtn.classList.add("deleteBtn");
-  ////이 걸 위에서 잡아버리면 null이 생긴다. why? 처음 읽었을 때는 존재하지 않는 클래스 명이기 때문에
-
-  unListChild.appendChild(listDeleteBtn);
+  /////li Add
+  const unListChild = document.createElement("li");
+  const todoElement = document.createElement("label");
+  todoElement.innerHTML = getTodo; ////appendChild는 tag만 불러올 수 있다. 텍스트는 innerHTML
   unList.appendChild(unListChild);
+  unListChild.prepend(todoElement);
 
-  const deleteBtn = document.querySelector(".deleteBtn");
-  console.log(deleteBtn);
+  /////Edit Input
+  const listEditInput = document.createElement("input");
+  listEditInput.type = "text";
+  unListChild.appendChild(listEditInput);
+
+  ////Delete Buttun
+  const listDeleteBtn = document.createElement("button");
+  listDeleteBtn.innerHTML = "❌";
+  listDeleteBtn.classList.add("deleteBtn");
+  unListChild.appendChild(listDeleteBtn);
+
+  ////Edit Buttun
+  const listEditBtn = document.createElement("button");
+  listEditBtn.innerHTML = "✏️";
+  listEditBtn.classList.add("editBtn");
+  unListChild.appendChild(listEditBtn);
+
+  /////Checkbox Buttun
+  const listCheckBox = document.createElement("input");
+  listCheckBox.type = "checkbox";
+  listCheckBox.classList.add("checkBox");
+  unListChild.prepend(listCheckBox);
+
+  ////event add
+  addEvents(unListChild);
 };
 
 const handlerSubmit = event => {

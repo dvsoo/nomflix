@@ -12,7 +12,7 @@ const handleGeoError = () => {
 };
 
 const createMapImage = (lat, lng) => {
-  const imageURL = `https://maps.googleapis.com/maps/api/staticmap?center=${lat},${lng}&size=800x800&zoom=12&markers=color:red%label:U%${lat},${lng}&key=AIzaSyDHaFh5JG-NlZWZgjSpxxcgRDkqZR9rSdY`;
+  const imageURL = `https://maps.googleapis.com/maps/api/staticmap?center=${lat},${lng}&size=500x500&zoom=12&markers=color:red|label:U|${lat},${lng}&maptype=hybrid&key=AIzaSyDHaFh5JG-NlZWZgjSpxxcgRDkqZR9rSdY`;
   const image = new Image();
   image.src = imageURL;
   output.appendChild(image);

@@ -15,8 +15,20 @@
 
     <div class=videoBox>222
         <video src="https://serranoarevalo.github.io/nomflix/9bfd1023900e31286103369c803c7ee9.ogv" class="video js-video"></video>
-        <button class="js-button">play</button>
+        <button class="js-button">▶️</button>
+        <button class="js-volumn">🔇</button>
+        <input class="js-range" list="volumes" type="range" min="0" max="1" step="0.1" />
+        <datalist id="volumes">
+            <option value="0" />
+            <option value="0.2" />
+            <option value="0.4" label="50%" />
+            <option value="0.6" />
+            <option value="0.8" />
+            <option value="1" label="100%" />
+        </datalist>
     </div>
+
+    <div id="todolist"></div>
     <script src="main.js"></script>
 </body>
 

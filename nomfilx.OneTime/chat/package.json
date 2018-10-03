@@ -1,0 +1,17 @@
+{
+  "name": "chat",
+  "version": "1.0.0",
+  "description": "sockat.io live chat",
+  "main": "index.js",
+  "dependencies": {
+    "express": "^4.16.3",
+    "morgan": "^1.9.1",
+    "socket.io": "^2.1.1"
+  },
+  "scripts": {
+    "dev": "nodemon ."
+  },
+  "devDependencies": {
+    "nodemon": "^1.18.4"
+  }
+}
